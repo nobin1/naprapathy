@@ -1,0 +1,101 @@
+{% load i18n %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Saila Naprapath</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="/static/jquery-1.3.2.min.js"></script>
+<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAEJ5EKxT-zzyh9T8oiMsa_BT3CArLSoykRVo3hnGnaODWut9ikhTXCPmf__321ry3Bx44j1mozEmsqw" type="text/javascript"></script>
+<link href="/static/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	
+<div class="main">
+  <div class="main_resize">
+    <div class="header">
+     <!-- <div class="logo"><a href="index.html"><img src="/static/logo.gif" width="232" height="74" border="0" alt="logo" /></a></div>-->
+     <div class="logo"><a href="/templates/index.html"><h1>Saila Naprapath</h1></a></div>
+     
+     <!--lang-->
+     <div id="lang">
+		<table>
+		<tr><td><form action="/i18n/setlang/" method="post" id="form_en"><div style="display:none"><input type="hidden" name="language" value="en" /><input name="next" type="hidden" value="/" /></div></form>
+          <a class=""  href="#" onclick="document.getElementById('form_en').submit();">
+            <img src="/static/en.png" BORDER=0  alt="Finnish" />
+          </a> </td>
+          
+        
+         
+         <td><form action="/i18n/setlang/" method="post" id="form_fi"><div style="display:none"><input type="hidden" name="language" value="fi" /><input name="next" type="hidden" value="/" /></div></form>
+          <a class="selected"  href="#" onclick="document.getElementById('form_fi').submit();">
+            <img src="/static/fi.png" BORDER=0 alt="English" />
+          </a></td></tr>
+         </table>
+	</div>
+     
+      <div class="clr"></div>
+      <div class="menu">
+        <ul>
+          <li><a href="/"><span>Home</span></a></li>
+          <li><a href="/services/"><span>Services</span></a></li>
+         
+          <li><a href="/contact/" class="active"><span> Contact Us</span></a></li>
+    	</ul>
+      </div>
+      <div class="clr"></div>
+    </div>
+  
+    
+    
+    
+     <div class="main_right">
+      <div class="clr"></div>
+      
+      <p class="grey"><strong>Saila Kamppi, Phone 358505894889, Email saila.kamppi@gmail.com<strong></p>
+      <p class="grey">Lahdenkatu 22, 26200, Rauma</p>
+      <p class="grey">Kankampaa</p>
+    <div id="map" style="width: 550px; height: 350px"></div>
+    
+    
+    <script type="text/javascript">
+    //<![CDATA[
+    
+    var map = new GMap(document.getElementById("map"));
+    <!-- map.addControl(new GSmallMapControl());
+    map.setCenter(new GLatLng(61.593276,22.148308), 13);
+    /*map.centerAndZoom(new GPoint(21.48302, 61.14536), 3);
+    map.setUIToDefault();*/
+    map.centerAndZoom(new GPoint(21.483017,61.145361), 10);
+    map.setUIToDefault();
+    var marker = new GMarker(new GLatLng(61.145361,21.483017), 13);
+    map.addOverlay(marker);
+    var marker1 = new GMarker(new GLatLng(61.803308,22.400089), 13);
+	map.addOverlay(marker1);
+    /*var marker = new GMarker(new GLatLng(61.593276,22.148308), 13);
+	map.addOverlay(marker);*/
+    //]]>
+</script>
+      
+     
+      
+
+    </div>
+    <div class="clr"></div>
+    
+    <div id="footer">
+		<div id="altnav">
+			<a href="/services/">{% trans 'About' %}</a> | 
+			<a href="/contact/">{% trans 'Contact' %}</a>
+		</div>
+		Design © BlueWebTemplates&amp;NN
+		<div class="clr"></div>
+	</div>
+  </div>
+  
+    
+ </div>
+</body>
+</html>
+
+

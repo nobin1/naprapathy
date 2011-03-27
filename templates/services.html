@@ -1,0 +1,89 @@
+{% load i18n %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Saila Naprapath</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="/static/jquery-1.3.2.min.js"></script>
+<link href="/static/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	
+<div class="main">
+  <div class="main_resize">
+    <div class="header">
+     <!-- <div class="logo"><a href="index.html"><img src="/static/logo.gif" width="232" height="74" border="0" alt="logo" /></a></div>-->
+     <div class="logo"><a href="/templates/index.html"><h1 font-type="Arial">Saila Naprapath</h1></a></div>
+     <!--lang-->
+     <div id="lang">
+		<table>
+		<tr><td><form action="/i18n/setlang/" method="post" id="form_en"><div style="display:none"><input type="hidden" name="language" value="en" /><input name="next" type="hidden" value="/" /></div></form>
+          <a class=""  href="#" onclick="document.getElementById('form_en').submit();">
+            <img src="/static/en.png" BORDER=0  alt="Finnish" />
+          </a> </td>
+          
+        
+         
+         <td><form action="/i18n/setlang/" method="post" id="form_fi"><div style="display:none"><input type="hidden" name="language" value="fi" /><input name="next" type="hidden" value="/" /></div></form>
+          <a class="selected"  href="#" onclick="document.getElementById('form_fi').submit();">
+            <img src="/static/fi.png" BORDER=0 alt="English" />
+          </a></td></tr>
+         </table>
+	</div>
+     
+      <div class="clr"></div>
+      <div class="menu">
+        <ul>
+          <li><a href="/"><span>Home</span></a></li>
+          <li><a href="/services/" class="active"><span>Services</span></a></li>
+         
+          <li><a href="/contact/"><span> Contact Us</span></a></li>
+    	</ul>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="clr"></div>
+    <h3>Our Services</h3>
+    <div class="main_left">
+      
+      <h2>What They Say</h2>
+      <img src="/static/test.gif" alt="picture" width="18" height="17" class="floated" />
+      <p>&quot;Really good treatment. My back feels much better now&quot;</p>
+      <p><em><strong>Bijay Poudel -Lansisuomi</strong></em></p>
+      <p>&nbsp;</p>
+      <p><img src="/static/test.gif" alt="picture" width="18" height="17" class="floated" /> </p>
+      <p>&quot;Excellent treatment&quot;</p>
+      <p><em><strong>Sanna Leena Korpela -Posti</strong></em></p>
+    </div>
+    <div class="main_right">
+      <div class="clr"></div>
+      
+      <h2>Services we provide </h2>
+      <p class="grey">We provide treatment of disease by manipulation of joints, muscles, and ligaments. Diseases can be caused by displacement of connective tissues.Connective tissue includes ligaments, tendons, muscles, cartilage that provide support to every system of the body.   Imbalances of the body can cause pain.  We help correct the imbalances of the body which result in tightness or over stretchment and stress in the body with following techniques</p>
+      <p class="grey"> 
+      		Gentle manipulation of the vertebrae to stretch the attached, contracted connective tissue that may be irritating the nerves as they exit the spinal column. 
+      	</p>
+      	<p class="grey">Manipulation/mobilization of the muscles and related soft tissue structures help restore imbalances.</p>
+      	<p class="grey">Joint mobilization of restricted joints and articulations to restore full range of motion.</p>
+     
+      
+
+    </div>
+    <div class="clr"></div>
+    
+    <div id="footer">
+		<div id="altnav">
+			<a href="/services/">{% trans 'About' %}</a> | 
+			<a href="/contact/">{% trans 'Contact' %}</a>
+		</div>
+		Design © BlueWebTemplates&amp;NN
+		<div class="clr"></div>
+	</div>
+  </div>
+  
+
+
+</div>
+</body>
+</html>
